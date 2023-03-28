@@ -25,6 +25,15 @@ button {
     font-family: 'League Spartan', sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color:hsl(6, 63%, 50%);
+}
+
+.attribution {
+    margin-top: 2rem;
+}
+
 /* ending of default styles */
 
 
