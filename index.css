@@ -125,7 +125,7 @@ section:last-of-type div {
 section:last-of-type div button {
     height: 50px;
     width: 45px;
-    box-shadow: 0 3px 3px hsl(221, 14%, 31%);
+    /* box-shadow: 0 3px 3px hsl(221, 14%, 31%); */
     color: hsl(221, 14%, 31%);
 }
 
@@ -137,13 +137,13 @@ section:last-of-type div:last-of-type button {
 .delete, .reset {
     font-size: 14px;
     background: hsl(225, 21%, 49%);
-    box-shadow: 0 3px 4px hsl(224, 28%, 35%) !important;
+    /* box-shadow: 0 3px 4px hsl(224, 28%, 35%) !important; */
     color: white !important;
 }
 
 .equals {
     background: hsl(6, 63%, 50%);
-    box-shadow: 0 3px 4px hsl(6, 70%, 34%) !important;
+    /* box-shadow: 0 3px 4px hsl(6, 70%, 34%) !important; */
     color: white !important;
 }
 
@@ -153,3 +153,17 @@ section:last-of-type div:last-of-type button {
     margin-bottom: 1rem;
 }
 
+
+/* boxshadow for each theme */
+
+.firstShadow {
+    box-shadow: 0 3px 1px hsla(0, 0%, 57%, 0.774);
+}
+
+.secondShadow {
+    box-shadow: 0 3px 1px hsl(0, 0%, 57%);
+}
+
+.thirdShadow {
+    box-shadow: 0 3px 1px hsl(285, 91%, 52%);
+}
