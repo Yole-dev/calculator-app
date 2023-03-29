@@ -43,6 +43,7 @@ main {
     flex-direction: column;
     justify-content: center;
     gap: 1.3rem;
+    width: 80%;
 }
 
 section:first-of-type {
@@ -133,7 +134,7 @@ section:last-of-type div {
 
 section:last-of-type div button {
     height: 50px;
-    width: 45px;
+    width: 100%;
     /* box-shadow: 0 3px 3px hsl(221, 14%, 31%); */
     color: hsl(221, 14%, 31%);
 }
