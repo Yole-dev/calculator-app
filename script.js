@@ -1,8 +1,10 @@
 `use strict`;
 
+
 const body = document.querySelector('body');
 const logo = document.querySelector('h4');
 const p = document.querySelectorAll('p');
+const screenFig = document.querySelector('.screenFigure');
 const firstBtn = document.querySelector('.firstTheme');
 const secondBtn = document.querySelector('.secondTheme');
 const thirdBtn = document.querySelector('.thirdTheme');
@@ -17,8 +19,7 @@ const equals = document.querySelector('.equals');
 
 const btn = document.querySelectorAll('.btn');
 
-
-
+//for toggling between themes
 
 const firstTheme = function() {
     body.style.background = 'hsl(222, 26%, 31%)';
@@ -104,6 +105,42 @@ thirdBtn.addEventListener('click', function() {
     thirdBtn.style.opacity = '1';
 });
 
+//calculator functions
+const calcBtn = Array.from(document.querySelectorAll('.btn'));
+const oppBtn = Array.from(document.querySelectorAll('.oppBtn'));
+
+calcBtn.map( button => {
+    button.addEventListener('click', function(e) {
+
+        switch(e.target.innerText) {
+            default:
+                screenFig.innerText += e.target.innerText;
+        }
+    });
+});
+
+oppBtn.map( button => {
+    button.addEventListener('click', function(e) {
+
+        switch(e.target.innerText) {
+            case 'RESET': 
+                  screenFig.innerText = ''; 
+                  break;  
+            case 'DEL':
+                  if(screenFig.innerText) {
+                    screenFig.innerText = screenFig.innerText.slice(0, -1);
+                  };
+                  break;
+            case '=':
+                try{
+                    screenFig.innerText = eval(screenFig.innerText);
+                } catch {
+                    screenFig.innerText = 'Error!';
+                }
+                break;
+        }
+    });
+});
 
 
 // default state/theme
